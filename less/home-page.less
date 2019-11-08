@@ -1,3 +1,18 @@
+// Header Content
+
+.title {
+  .flex(center, center);
+  flex-direction: column;
+  background-color: @nav-bg;
+
+  h1 {
+    .nav-section();
+    text-align: center;
+    padding: 1rem;
+    font-size: 4rem;
+  }
+}
+
 // Home Content
 
 .home {
@@ -58,6 +73,11 @@
       }
 
       .btn {
+        .custom-btn();
+
+        &:hover {
+            .custom-btn(@btn-bg-color, @porcelain);
+        }
       }
     }
 

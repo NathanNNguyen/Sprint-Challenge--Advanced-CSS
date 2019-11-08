@@ -1,1 +1,22 @@
 // Mixins Here
+
+.flex(@justify, @align) {
+    display: flex;
+    justify-content: @justify;
+    align-items: @align;
+}
+
+.nav-section() {
+    width: 30%;
+    margin-bottom: 1.5rem;
+}
+
+.custom-btn(@font-color:@porcelain, @bg-color:@btn-bg-color) {
+    width: 30%;
+    height: 3.5rem;
+    border-radius: 15%;
+    color: @font-color;
+    background-color: @bg-color;
+    font-size: 1.6rem;
+    outline: none;
+}
