@@ -5,8 +5,12 @@ nav {
     .nav-section();
     border-bottom: 1px solid @nav-border;
 
+    @media @phone {
+        width: 80%;
+      }
+
     a {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         text-decoration: none;
         color: @nav-font;
     }
