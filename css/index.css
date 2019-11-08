@@ -190,6 +190,11 @@ nav a {
   align-items: center;
   flex-direction: column;
   background-color: #F6F6F6;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 .title h1 {
   width: 30%;
@@ -202,6 +207,9 @@ nav a {
   .title h1 {
     width: 100%;
   }
+}
+.home {
+  padding-top: 10rem;
 }
 @media (max-width: 500px) {
   .home {
@@ -224,14 +232,154 @@ nav a {
   flex-wrap: wrap;
   width: 100%;
 }
+.home .space-images .blast {
+  -webkit-animation-name: animatedLeft;
+  -webkit-animation-duration: 3s;
+  animation-name: animatedLeft;
+  animation-duration: 3s;
+  animation-direction: alternate;
+  position: relative;
+}
+@-webkit-keyframes animatedLeft {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  50% {
+    left: -480px;
+    top: 0px;
+  }
+  100% {
+    left: 0px;
+    top: 0px;
+  }
+}
+@keyframes animatedLeft {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  50% {
+    left: -480px;
+    top: 0px;
+  }
+  100% {
+    left: 0px;
+    top: 0px;
+  }
+}
 @media (max-width: 500px) {
   .home .space-images .blast {
     width: 100%;
   }
 }
+.home .space-images .sky {
+  -webkit-animation-name: animatedAround;
+  -webkit-animation-duration: 3s;
+  animation-name: animatedAround;
+  animation-duration: 3s;
+  animation-direction: alternate;
+  position: relative;
+}
+@-webkit-keyframes animatedAround {
+  8.8% {
+    left: 0;
+    top: 0;
+  }
+  25.4% {
+    left: -200px;
+    top: -200px;
+  }
+  42% {
+    left: 200px;
+    top: -200px;
+  }
+  59% {
+    left: 200px;
+    top: 200px;
+  }
+  75% {
+    left: -200px;
+    top: 200px;
+  }
+  91.2% {
+    left: -200px;
+    top: -200px;
+  }
+  100% {
+    left: 0px;
+    top: 0px;
+  }
+}
+@keyframes animatedAround {
+  8.8% {
+    left: 0;
+    top: 0;
+  }
+  25.4% {
+    left: -200px;
+    top: -200px;
+  }
+  42% {
+    left: 200px;
+    top: -200px;
+  }
+  59% {
+    left: 200px;
+    top: 200px;
+  }
+  75% {
+    left: -200px;
+    top: 200px;
+  }
+  91.2% {
+    left: -200px;
+    top: -200px;
+  }
+  100% {
+    left: 0px;
+    top: 0px;
+  }
+}
 @media (max-width: 500px) {
   .home .space-images .sky {
     display: none;
+  }
+}
+.home .space-images .launch {
+  -webkit-animation-name: animatedRight;
+  -webkit-animation-duration: 3s;
+  animation-name: animatedRight;
+  animation-duration: 3s;
+  animation-direction: alternate;
+  position: relative;
+}
+@-webkit-keyframes animatedRight {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  50% {
+    left: 480px;
+    top: 0px;
+  }
+  100% {
+    left: 0px;
+    top: 0px;
+  }
+}
+@keyframes animatedRight {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  50% {
+    left: 480px;
+    top: 0px;
+  }
+  100% {
+    left: 0px;
+    top: 0px;
   }
 }
 @media (max-width: 500px) {

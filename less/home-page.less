@@ -5,6 +5,11 @@
   flex-direction: column;
   background-color: @nav-bg;
 
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;  
 
   h1 {
     .nav-section();
@@ -21,6 +26,8 @@
 // Home Content
 
 .home {
+
+  padding-top: 10rem;
 
   @media @phone {
     width: 90%;
@@ -51,16 +58,69 @@
     width: 100%;
 
     .blast {
+
+      .animatedLeft();
+
+      @-webkit-keyframes animatedLeft {
+        0%   { left:0; top:0;}
+        50%  { left:-480px; top:0px;}
+        100% { left:0px; top:0px;}
+      }
+      
+      @keyframes animatedLeft {
+        0%   { left:0; top:0;}
+        50%  { left:-480px; top:0px;}
+        100% { left:0px; top:0px;}
+      }
+
       @media @phone {
         width: 100%;
       }
     }
+
     .sky {
+      .animatedAround();
+
+      @-webkit-keyframes animatedAround {
+        8.8%   { left:0; top:0;}
+        25.4%  { left:-200px; top:-200px;}
+        42%  { left:200px; top:-200px;}
+        59%  { left:200px; top:200px;}
+        75%  { left:-200px; top:200px;}
+        91.2%  { left:-200px; top:-200px;}
+        100% { left:0px; top:0px;}
+      }
+      
+      @keyframes animatedAround {
+        8.8%   { left:0; top:0;}
+        25.4%  { left:-200px; top:-200px;}
+        42%  { left:200px; top:-200px;}
+        59%  { left:200px; top:200px;}
+        75%  { left:-200px; top:200px;}
+        91.2%  { left:-200px; top:-200px;}
+        100% { left:0px; top:0px;}
+      }
+
       @media @phone {
         display: none;
       }
     }
+    
     .launch {
+      .animatedRight();
+
+      @-webkit-keyframes animatedRight {
+        0%   { left:0; top:0;}
+        50%  { left:480px; top:0px;}
+        100% { left:0px; top:0px;}
+      }
+      
+      @keyframes animatedRight {
+        0%   { left:0; top:0;}
+        50%  { left:480px; top:0px;}
+        100% { left:0px; top:0px;}
+      }
+
       @media @phone {
         display: none;
       }
