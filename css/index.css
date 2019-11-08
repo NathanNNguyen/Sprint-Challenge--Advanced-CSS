@@ -271,6 +271,10 @@ nav a {
 @media (max-width: 500px) {
   .home .space-images .blast {
     width: 100%;
+    -webkit-animation-name: animatedNone;
+    -webkit-animation-duration: 0;
+    animation-name: animatedNone;
+    animation-duration: 0;
   }
 }
 .home .space-images .sky {
@@ -470,6 +474,63 @@ nav a {
   width: 100%;
   height: auto;
   border-radius: 10px;
+}
+form {
+  padding: 4srem 0;
+  border: 1px solid #F1F1F1;
+}
+form input[type=text],
+form input[type=password] {
+  width: 100%;
+  padding: 1.5rem;
+  margin: 0.5rem 0 2.2rem 0;
+  display: flex;
+  outline: none;
+}
+form hr {
+  border: 1px solid #F1F1F1;
+  margin-bottom: 25px;
+}
+form button {
+  background-color: #4CAF50;
+  color: #F6F6F6;
+  padding: 1.5rem;
+  margin: 0.8rem 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  font-size: 1.6rem;
+}
+form button:hover {
+  opacity: 1;
+}
+form .cancelbtn {
+  background-color: #f44336;
+}
+form .cancelbtn,
+form .signupbtn {
+  width: 100%;
+  outline: none;
+}
+form .container {
+  padding: 1.6rem;
+}
+@media (max-width: 500px) {
+  form .container {
+    padding: 0.5rem;
+  }
+}
+form a {
+  color: #56aaff;
+}
+form a:link,
+form a:visited {
+  text-decoration: none;
+}
+form .clearfix::after {
+  content: "";
+  clear: both;
 }
 footer {
   color: #22283B;

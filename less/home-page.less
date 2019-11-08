@@ -75,6 +75,7 @@
 
       @media @phone {
         width: 100%;
+        .animatedNone();
       }
     }
 
@@ -206,4 +207,73 @@
       }
     }
   }
-}// home
+}
+// form
+form {
+  padding: 4srem 0;
+  border:1px solid @sea-shell;
+
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 1.5rem;
+    margin: .5rem 0 2.2rem 0;
+    display: flex;
+    outline: none;
+
+  }
+
+
+  hr {
+    border: 1px solid @sea-shell;
+    margin-bottom: 25px;
+  }
+
+
+  button {
+    background-color: #4CAF50;
+    color: @wild-sand;
+    padding: 1.5rem;
+    margin: .8rem 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    font-size: 1.6rem;
+  }
+
+  button:hover {
+    opacity:1;
+  }
+
+  .cancelbtn {
+    background-color: #f44336;
+  }
+
+  .cancelbtn, .signupbtn {
+    width: 100%;
+    outline: none;
+  }
+
+  .container {
+    padding: 1.6rem;
+
+    @media @phone {
+      padding: .5rem;
+    }
+  }
+
+  a {
+    color:rgb(86, 170, 255);
+    
+    &:link,
+    &:visited {
+      text-decoration: none;
+    }
+  }
+
+  .clearfix::after {
+    content: "";
+    clear: both;
+  }
+
+}
