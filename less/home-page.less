@@ -1,9 +1,47 @@
+// Header Content
+
+.title {
+  .flex(center, center);
+  flex-direction: column;
+  background-color: @nav-bg;
+
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;  
+
+  h1 {
+    .nav-section();
+    text-align: center;
+    padding: 1rem;
+    font-size: 4rem;
+
+    @media @phone {
+      width: 100%;
+    }
+  }
+}
+
 // Home Content
 
 .home {
 
+  padding-top: 10rem;
+
+  @media @phone {
+    width: 90%;
+  }
+  
   .intro {
 
+    .hero {
+
+      @media @phone {
+        width: 100%;
+      }
+    }
+    
     h2 {
       padding: 15px;
     }
@@ -18,6 +56,76 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+
+    .blast {
+
+      .animatedLeft();
+
+      @-webkit-keyframes animatedLeft {
+        0%   { left:0; top:0;}
+        50%  { left:-480px; top:0px;}
+        100% { left:0px; top:0px;}
+      }
+      
+      @keyframes animatedLeft {
+        0%   { left:0; top:0;}
+        50%  { left:-480px; top:0px;}
+        100% { left:0px; top:0px;}
+      }
+
+      @media @phone {
+        width: 100%;
+        .animatedNone();
+      }
+    }
+
+    .sky {
+      .animatedAround();
+
+      @-webkit-keyframes animatedAround {
+        8.8%   { left:0; top:0;}
+        25.4%  { left:-200px; top:-200px;}
+        42%  { left:200px; top:-200px;}
+        59%  { left:200px; top:200px;}
+        75%  { left:-200px; top:200px;}
+        91.2%  { left:-200px; top:-200px;}
+        100% { left:0px; top:0px;}
+      }
+      
+      @keyframes animatedAround {
+        8.8%   { left:0; top:0;}
+        25.4%  { left:-200px; top:-200px;}
+        42%  { left:200px; top:-200px;}
+        59%  { left:200px; top:200px;}
+        75%  { left:-200px; top:200px;}
+        91.2%  { left:-200px; top:-200px;}
+        100% { left:0px; top:0px;}
+      }
+
+      @media @phone {
+        display: none;
+      }
+    }
+    
+    .launch {
+      .animatedRight();
+
+      @-webkit-keyframes animatedRight {
+        0%   { left:0; top:0;}
+        50%  { left:480px; top:0px;}
+        100% { left:0px; top:0px;}
+      }
+      
+      @keyframes animatedRight {
+        0%   { left:0; top:0;}
+        50%  { left:480px; top:0px;}
+        100% { left:0px; top:0px;}
+      }
+
+      @media @phone {
+        display: none;
+      }
+    }
 
     img {
       width: 28%;
@@ -46,8 +154,19 @@
     display: flex;
     justify-content: center;
 
+    @media @phone {
+      flex-direction: column-reverse;
+      padding: 2rem 2rem;
+      margin-bottom: 1rem;
+    }
+
     .walk-text {
       width: 50%;
+
+      @media @phone {
+        width: 100%;
+        margin-top: 2rem;
+      }
 
       h3 {
         margin-bottom: 10px;
@@ -58,12 +177,28 @@
       }
 
       .btn {
+        .custom-btn();
+
+        @media @phone {
+          width: 100%;
+          height: 5.5rem;
+          font-weight: 700;
+        }
+
+        &:hover {
+            .custom-btn(@btn-bg-color, @porcelain);
+        }
       }
     }
 
     .walk-img {
       width: 46%;
       margin-left: 4%;
+
+      @media @phone {
+        width: 100%;
+        margin-left: 0;
+      }
       
       img {
         width: 100%;
@@ -72,4 +207,73 @@
       }
     }
   }
-}// home
+}
+// form
+form {
+  padding: 4srem 0;
+  border:1px solid @sea-shell;
+
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 1.5rem;
+    margin: .5rem 0 2.2rem 0;
+    display: flex;
+    outline: none;
+
+  }
+
+
+  hr {
+    border: 1px solid @sea-shell;
+    margin-bottom: 25px;
+  }
+
+
+  button {
+    background-color: #4CAF50;
+    color: @wild-sand;
+    padding: 1.5rem;
+    margin: .8rem 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    font-size: 1.6rem;
+  }
+
+  button:hover {
+    opacity:1;
+  }
+
+  .cancelbtn {
+    background-color: #f44336;
+  }
+
+  .cancelbtn, .signupbtn {
+    width: 100%;
+    outline: none;
+  }
+
+  .container {
+    padding: 1.6rem;
+
+    @media @phone {
+      padding: .5rem;
+    }
+  }
+
+  a {
+    color:rgb(86, 170, 255);
+    
+    &:link,
+    &:visited {
+      text-decoration: none;
+    }
+  }
+
+  .clearfix::after {
+    content: "";
+    clear: both;
+  }
+
+}

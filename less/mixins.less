@@ -1,1 +1,56 @@
 // Mixins Here
+
+.flex(@justify, @align) {
+    display: flex;
+    justify-content: @justify;
+    align-items: @align;
+}
+
+.nav-section() {
+    width: 30%;
+    margin-bottom: 1.5rem;
+}
+
+.custom-btn(@font-color:@porcelain, @bg-color:@btn-bg-color) {
+    width: 30%;
+    height: 3.5rem;
+    border-radius: 5%;
+    color: @font-color;
+    background-color: @bg-color;
+    font-size: 1.6rem;
+    outline: none;
+}
+
+.animatedLeft() {
+    -webkit-animation-name: animatedLeft;
+    -webkit-animation-duration: 3s;
+    animation-name: animatedLeft;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    position: relative;
+}
+
+.animatedRight() {
+    -webkit-animation-name: animatedRight;
+    -webkit-animation-duration: 3s;
+    animation-name: animatedRight;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    position: relative;
+}
+
+.animatedAround() {
+    -webkit-animation-name: animatedAround;
+    -webkit-animation-duration: 3s;
+    animation-name: animatedAround;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    position: relative;
+}
+
+.animatedNone() {
+    -webkit-animation-name: animatedNone;
+    -webkit-animation-duration: 0;
+    animation-name: animatedNone;
+    animation-duration: 0;
+}
